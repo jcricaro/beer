@@ -1,5 +1,9 @@
 # beer
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/03d48181-7cfe-4e9d-9488-2f3ec5d829df/deploy-status)](https://app.netlify.com/sites/jcricaro-beer/deploys)
+
+[demo](https://jcricaro-beer.netlify.com/)
+
 ## Project setup
 ```
 npm install
