@@ -68,9 +68,7 @@ export default Vue.extend({
       }
     },
     existsOnCart (): boolean {
-      return this.cartItems.some((beer: AppBeer) => {
-        return beer.id === this.beer.id
-      })
+      return this.cartItems.some((beer: AppBeer) => beer.id === this.beer.id)
     }
   },
   methods: {

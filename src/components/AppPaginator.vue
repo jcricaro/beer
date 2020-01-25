@@ -1,13 +1,13 @@
 <template>
   <ul class="paginator__list">
     <li class="paginator__list-item">
-      <button class="btn">back</button>
+      <button class="btn" @click="handlePreviousPage">back</button>
     </li>
     <li class="paginator__list-item" v-for="(page, index) in pages" :key="index">
-      <button class="btn" @click="changePage(page.page)">{{ page.page }}</button>
+      <button class="btn" @click="handleChangePage(page.page)">{{ page.page }}</button>
     </li>
     <li class="paginator__list-item">
-      <button class="btn">next</button>
+      <button class="btn" @click="handleNextPage">next</button>
     </li>
   </ul>
 </template>
@@ -38,8 +38,14 @@ export default Vue.extend({
     }
   },
   methods: {
-    changePage (page: number): void {
+    handleChangePage (page: number): void {
       this.$emit('update:currentPage', page)
+    },
+    handleNextPage () {
+      this.$emit('update:currentPage', this.currentPage === this.pages.length ? this.currentPage : this.currentPage + 1)
+    },
+    handlePreviousPage () {
+      this.$emit('update:currentPage', this.currentPage === 1 ? this.currentPage : this.currentPage - 1)
     }
   }
 })

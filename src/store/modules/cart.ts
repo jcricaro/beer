@@ -25,13 +25,9 @@ const mutations: MutationTree<CartState> = {
     localStorage.setItem('cart', JSON.stringify(state.items))
   },
   removeItem (state, id: number) {
-    state.items = state.items.filter(item => {
-      return item.id !== id
-    })
+    state.items = state.items.filter(item => item.id !== id)
     // persist to local storage
-    localStorage.setItem('cart', JSON.stringify(state.items.filter((item) => {
-      return item.id !== id
-    })))
+    localStorage.setItem('cart', JSON.stringify(state.items.filter(item => item.id !== id)))
   }
 }
 
