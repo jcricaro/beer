@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 0;
+  }
+
+  .btn {
+    transition:all 0.1s ease;
+    padding: 10px 15px;
+    border: 0;
+    cursor: pointer;
+    background: rgb(233, 56, 115);
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 10px;
+    line-height: 12px;
+    font-size: 12px;
+    outline: none;
+
+    &:hover {
+      box-shadow:
+              1px 1px #53a7ea,
+              1px 2px #53a7ea,
+              1px 3px #53a7ea;
+      transform: translateY(-2px);
+    }
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+
+  .content {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  .footer {
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #FDD8D8;
+    color: #EA96B2;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse:separate; 
+    border-spacing: 0 10px;
+    .table__item {
+      transition:all 0.3s ease;
+      border-radius: 10px;;
+      // background: rgb(243, 243, 243);
+      td {
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+
+      td:first-of-type {
+        border-radius: 10px 0 0 10px;
+      }
+
+      td:last-of-type {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+  .paginator__list {
+    margin: 20px 0;
+    list-style-type: none;
+  
+    .paginator__list-item {
+      display: inline;
+      margin: 0 3px;
+    }
+  }
+
+  .dialog__overlay {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(5, 4, 4, 0.25);
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+}
